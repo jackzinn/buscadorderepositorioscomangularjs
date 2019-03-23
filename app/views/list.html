@@ -1,0 +1,63 @@
+<div class="row">
+    <form class="col s12 m12">
+        <div class="row">
+            <div class="input-field col s6 m8">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="code_repository" type="text" ng-model="code_repository" ng-keydown="keyPressEnterExecute($event, 'codeRepository'); keyDataRepositorys($event);" class="validate">
+                <label for="code_repository">Digite um usuário</label>
+            </div>
+            <div class="input-field col s6 m4">
+                <a class="white black-text waves-effect waves-light btn" ng-click="buscarUsuario();">
+                    <i class="material-icons left">search</i>
+                    Buscar
+                </a>
+            </div>
+        </div>
+    </form>
+    <div class="col s12 m12">
+        <div class="tabela">
+            <table class="striped responsive-table">
+                <thead>
+                    <tr>
+                        <th>Nome de usuário</th>
+                        <th>Página do usuário</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="user in userData">
+                    <tr>
+                        <td class="elipseTexts" title="{{user.login}}">{{user.login}}</td>
+                        <td class="elipseTexts" title="{{user.html_url}}">{{user.html_url}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col s12 m12">
+        <div class="input-field col s12 m12">
+            <a class="white black-text waves-effect waves-light btn" ng-click="buscarRepositorio($event);">
+                <i class="material-icons left">search</i>
+                Buscar os Repositórios
+            </a>
+        </div>
+    </div>
+    <div class="col s12 m12">
+        <div class="tabela">
+            <table class="striped responsive-table">
+                <thead>
+                    <tr>
+                        <th>Repositório</th>
+                        <th>URL</th>
+                        <th>Ir para o Repositório</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="repository in repositoryByparams">
+                    <tr ng-repeat="values in repository">
+                        <td class="elipseTexts" title="{{values.name}}">{{values.name}}</td>
+                        <td class="elipseTexts" title="{{values.svn_url}}">{{values.svn_url}}</td>
+                        <td><a href="{{values.svn_url}}"><i class="irRepo small material-icons">pageview</i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

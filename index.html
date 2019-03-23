@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projeto</title>
+    <!-- libs -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- angularjs -->
+    <script src="app.js"></script>
+    <script src="app/config/config.js"></script>
+    <!-- controllers -->
+    <script src="app/controllers/listCtrl.js"></script>
+    <!-- services -->
+    <script src="app/services/listAPIservices.js"></script>
+
+    <!-- materialize -->
+    <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="app/css/style.css">
+
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+
+    <script src="bundle.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <ng-app ng-app="app">
+
+            <div class="navbar-fixed">
+                <nav class="pink">
+                    <div class="nav-wrapper">
+                        <a class="brand-logo"><i class="material-icons">storage</i> Repositórios</a>
+                        
+                        <a  data-target="mobile-demo" class="sidenav-trigger">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <!-- <li><a href="sass.html">Sass</a></li>
+                            <li><a href="badges.html">Components</a></li>
+                            <li><a href="collapsible.html">Javascript</a></li>
+                            <li><a href="mobile.html">Mobile</a></li> -->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <ul class="sidenav" id="mobile-demo">
+                <!-- <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li> -->
+            </ul>
+
+            <ui-view></ui-view>
+        </ng-app>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+    "name": "projeto-entrevista",
+    "version": "1.0.0",
+    "description": "Projeto para entrevista de emprego para empresa Louder",
+    "main": "index.js",
+    "dependencies": {
+        "@uirouter/angularjs": "^1.0.7",
+        "angular": "^1.7.8",
+        "google-fonts": "^1.0.0",
+        "jquery": "^3.3.1",
+        "material-icons": "^0.3.0",
+        "materialize-css": "^1.0.0-rc.2"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.15.3"
+    },
+    "scripts": {
+        "test": "dev"
+    },
+    "author": "Kelvin Musselli Mesquita Serva",
+    "license": "UNLICENSED"
+}
